@@ -1,0 +1,83 @@
+a {
+    text-decoration: none;
+    color: black; 
+}
+
+.centered {
+    text-align: center;
+    padding: 0;
+}
+
+.gridContainer {
+    display: block !important;
+    margin: 0 auto !important;
+    max-width: 1024px;
+}
+
+.marginBottom20 {
+    margin-bottom: 20px !important;
+}
+
+.marginLeft {
+    margin-left: 10px !important;
+}
+
+html {
+    background: url(images/TransparentBackGround.png) no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+}
+
+.NoPadding {
+    padding: 0 !important;
+}
+
+.largeFont {
+    font-size: 20px !important;
+}
+
+p {
+    color: black;
+    font-weight: bold;
+}
+
+.gradient {
+    background: rgb(174,188,191); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(174,188,191,1) 0%, rgba(110,119,116,1) 50%, rgba(10,14,10,1) 51%, rgba(10,8,9,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(174,188,191,1) 0%,rgba(110,119,116,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(174,188,191,1) 0%,rgba(110,119,116,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aebcbf', endColorstr='#0a0809',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.buttonController {
+    display: flex;
+    border-radius: 10em;
+    border: 5px solid black;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.control {
+    flex: 1;
+    text-align: center;
+}
+
+.leftActive {
+    background: black;
+    color: white;
+    border-radius: 10em 0 0 10em;
+}
+
+.rightActive {
+    background: black;
+    color: white;
+    border-radius: 0 10em 10em 0;
+}
+
+.marginTop {
+    margin-top: 9px;
+}
+
+.pointer {
+    cursor: pointer;
+}
