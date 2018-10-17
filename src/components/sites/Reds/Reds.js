@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import Styles from '../Styles/Styles.css';
 import TextField from '@material-ui/core/TextField';
 import ShowPage from './ShowPage'
-
+import APIURL from '.../helpers/environment';
 
 export default class Reds extends Component {
     constructor() {
@@ -24,7 +24,7 @@ export default class Reds extends Component {
     loadAllWines = () => {
         const accessToken = localStorage.getItem('SessionToken')
         
-        fetch('http://localhost:3000/wines/all', {
+        fetch(`${APIURL}/wines/all`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ export default class Reds extends Component {
         
         let newWine = { wine: { vintage: vintage, color: color, apellation: apellation, country: country, score: score, confidence_index: confidenceIndex, region: region, name: name } }
         
-        fetch('http://localhost:3000/wines/create', {
+        fetch(`${APIURL}/wines/create`, {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json',

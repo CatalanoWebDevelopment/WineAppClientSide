@@ -3,6 +3,7 @@ import '../Styles/Styles.css'
 import TextField from '@material-ui/core/TextField'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
+import APIURL from '.../helpers/environment';
 
 export default class Signup extends React.Component {
     constructor(props) {
@@ -19,7 +20,7 @@ export default class Signup extends React.Component {
         let password = document.getElementById("passwordCreate").value
         let newUserData = {user: { username: username, password: password }}
 
-        fetch('http://localhost:3000/api/user/createuser', {
+        fetch(`${APIURL}/api/user/createuser`, {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'

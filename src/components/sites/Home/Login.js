@@ -3,6 +3,7 @@ import '../Styles/Styles.css'
 import TextField from '@material-ui/core/TextField'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
+import APIURL from '.../helpers/environment';
 
 export default class LoginBox extends Component {
     constructor(props) {
@@ -19,7 +20,7 @@ export default class LoginBox extends Component {
         let password = document.getElementById("passwordSignIn").value
         let userData = {user: { username: username, password: password }}
         
-        fetch('http://localhost:3000/api/user/signin', {
+        fetch(`${APIURL}/api/user/signin`, {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'

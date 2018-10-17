@@ -8,7 +8,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
 import UpdateModal from './UpdateModal'
-
+import APIURL from '.../helpers/environment';
 
 export default class ShowPage extends Component {
     constructor(props) { 
@@ -27,7 +27,7 @@ export default class ShowPage extends Component {
     componentWillMount() {
         let token = localStorage.getItem('SessionToken');
         
-        fetch('http://localhost:3000/api/user/me', {
+        fetch(`${APIURL}/api/user/me`, {
             method: "GET",
             headers: {
                 'Authorization': token
@@ -46,7 +46,7 @@ export default class ShowPage extends Component {
         let id = event.target.id
         const accessToken = localStorage.getItem('SessionToken')
         
-        fetch(`http://localhost:3000/wines/delete/${id}`, {
+        fetch(`${APIURL}/wines/delete/${id}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': accessToken
@@ -73,7 +73,7 @@ export default class ShowPage extends Component {
         let id = event.target.id
         const accessToken = localStorage.getItem('SessionToken')
         
-        fetch(`http://localhost:3000/wines/${id}`, {
+        fetch(`${APIURL}/wines/${id}`, {
             method: 'GET',
             headers: {
                 'Authorization': accessToken
@@ -98,7 +98,7 @@ export default class ShowPage extends Component {
         let wineId = event.target.id
         let listId = this.state.listId
         
-        fetch(`http://localhost:3000/user-favorites/create/${wineId}/list/${listId}`, {
+        fetch(`${APIURL}/user-favorites/create/${wineId}/list/${listId}`, {
             method: "POST",
             headers: {
                 'Authorization': localStorage.getItem('SessionToken'),
@@ -110,7 +110,7 @@ export default class ShowPage extends Component {
     }
     
     fetchAllLists = () => {
-        fetch('http://localhost:3000/favorites-list/all', {
+        fetch(`${APIURL}/favorites-list/all`, {
             method: "GET",
             headers: {
                 "Authorization": localStorage.getItem('SessionToken')

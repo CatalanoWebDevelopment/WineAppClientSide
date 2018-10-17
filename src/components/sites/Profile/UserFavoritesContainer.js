@@ -7,6 +7,7 @@ import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
+import APIURL from '.../helpers/environment';
 
 export default class UserFavoritesContainer extends React.Component {
     constructor() {
@@ -45,7 +46,7 @@ export default class UserFavoritesContainer extends React.Component {
         let title = this.state.title
         let list = { list_name: { title: title } }
         
-        fetch('http://localhost:3000/favorites-list/create', {
+        fetch(`${APIURL}/favorites-list/create`, {
             method: "POST",
             headers: {
                 "Authorization": localStorage.getItem('SessionToken'),
@@ -58,7 +59,7 @@ export default class UserFavoritesContainer extends React.Component {
     }
     
     fetchAllLists = () => {
-        fetch('http://localhost:3000/favorites-list/all', {
+        fetch(`${APIURL}/favorites-list/all`, {
             method: "GET",
             headers: {
                 "Authorization": localStorage.getItem('SessionToken')
@@ -72,7 +73,7 @@ export default class UserFavoritesContainer extends React.Component {
     }
     
     displayData = id => {
-        fetch(`http://localhost:3000/user-favorites/lists/${id}`, {
+        fetch(`${APIURL}/user-favorites/lists/${id}`, {
             method: "GET",
             headers: {
                 'Authorization': localStorage.getItem('SessionToken')
@@ -80,7 +81,7 @@ export default class UserFavoritesContainer extends React.Component {
         }).then(response => response.json())
         .then(response => {
             return response.map(wine => {
-                fetch(`http://localhost:3000/wines/${wine.wine_id}`, {
+                fetch(`${APIURL}/wines/${wine.wine_id}`, {
                     method: "GET",
                     headers: {
                         'Authorization': localStorage.getItem('SessionToken')

@@ -3,6 +3,7 @@ import '../Styles/Styles.css'
 import TextField from '@material-ui/core/TextField'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
+import APIURL from '.../helpers/environment';
 
 import { Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody } from 'reactstrap';
 
@@ -36,7 +37,7 @@ export default class UpdatePage extends React.Component {
         
         let updatedWine = { wine: { vintage: vintage, color: color, apellation: apellation, country: country, score: score, confidence_index: confidenceIndex, region: region, name: name } }
         
-        fetch(`http://localhost:3000/wines/update/${this.props.wine.id}`, {
+        fetch(`${APIURL}/wines/update/${this.props.wine.id}`, {
             method: "PUT",
             headers: new Headers({
                 'Content-Type': 'application/json',
