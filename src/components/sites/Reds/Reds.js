@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import Styles from '../Styles/Styles.css';
 import TextField from '@material-ui/core/TextField';
 import ShowPage from './ShowPage'
-import APIURL from '.../helpers/environment';
+import APIURL from '../../../helpers/environment';
 
 export default class Reds extends Component {
     constructor() {

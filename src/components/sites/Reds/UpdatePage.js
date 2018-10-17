@@ -3,7 +3,7 @@ import '../Styles/Styles.css'
 import TextField from '@material-ui/core/TextField'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
-import APIURL from '.../helpers/environment';
+import APIURL from '../../../helpers/environment';
 
 import { Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody } from 'reactstrap';
 

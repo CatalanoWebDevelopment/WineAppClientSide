@@ -7,7 +7,7 @@ import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import APIURL from '.../helpers/environment';
+import APIURL from '../../../helpers/environment';
 
 export default class UserFavoritesContainer extends React.Component {
     constructor() {
