@@ -25,7 +25,7 @@ export default class Signup extends React.Component {
             headers: {
                 'Content-Type': 'application/json'
             },
-                body: JSON.stringify(newUserData) 
+                body: JSON.parse(newUserData) 
             })
             .then(response => response.json())
             .then(response => {
