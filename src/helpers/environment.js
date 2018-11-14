@@ -9,7 +9,7 @@ switch (window.location.hostname) {
     // this is the deployed react application
     case 'winemaster-client.herokuapp.com/':
         // this is the full url of your deployed API
-        APIURL = 'https://winemaster-server.herokuapp.com/'
+        APIURL = 'https://winemaster-server.herokuapp.com'
 }
 
 export default APIURL;
