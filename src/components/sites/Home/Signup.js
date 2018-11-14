@@ -18,7 +18,7 @@ export default class Signup extends React.Component {
         event.preventDefault();
         let username = document.getElementById("usernameCreate").value
         let password = document.getElementById("passwordCreate").value
-        let newUserData = {user: { username: username, password: password }}
+        let newUserData = { username, password }
 
         fetch(`${APIURL}/api/user/createuser`, {
             method: 'post',
